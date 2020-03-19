@@ -7,10 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8367020-e1d6-4412-9932-2ccc50f4ccff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_game.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_game.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_game_won.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_game_won.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_title.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_title.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,9 +64,9 @@
           <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_game_won.xml">
-          <provider selected="true" editor-type-id="text-editor">
+          <provider editor-type-id="text-editor">
             <state relative-caret-position="361">
               <caret line="72" column="9" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
               <folding>
@@ -80,7 +77,16 @@
               </folding>
             </state>
           </provider>
-          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -94,6 +100,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_game.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_title.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_game_won.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       </list>
     </option>
   </component>
@@ -220,10 +227,12 @@
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Run" />
       <window_info anchor="bottom" id="Logcat" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="TODO" />
       <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Debug" />
       <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3295129" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Build" weight="0.3295129" />
@@ -263,7 +272,7 @@
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_game_won.xml">
-      <provider selected="true" editor-type-id="text-editor">
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="72" column="9" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
           <folding>
@@ -274,7 +283,14 @@
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

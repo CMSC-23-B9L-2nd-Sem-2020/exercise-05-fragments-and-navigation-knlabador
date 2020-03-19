@@ -15,7 +15,6 @@
   -->
 
 <resources>
-    <string name="app_name">Android Trivia</string>
     <string name="game_over">Game Over</string>
     <string name="try_again">Try Again?</string>
     <string name="position">Position</string>
@@ -31,10 +30,43 @@
     <string name="title_trivia_rules">Trivia Rules</string>
     <string name="share_success_text">I mastered #UdacityAndroidTrivia with %1$d/%2$d correct questions!</string>
     <string name="submit_button">Submit</string>
-    <string name="congratulations">Congratulations!</string>
     <string name="share">Share</string>
     <string name="sharing_not_available">Sharing Not Available</string>
 
+    <string name="app_name">Labador_exer5_LightsOutv2</string>
+    <string name="welcome">Play the Lights Out Game!</string>
+    <string name="nickname_text">What is your nickname?</string>
+    <string name="congratulations">Congratulations! You Won!</string>
+    <string name="play_button">play</string>
+    <string name="reset_button">reset</string>
+    <string name="retry_button">retry</string>
+    <string name="clicks_text">Clicks: 0</string>
+
+    <string name="box1">Box One</string>
+    <string name="box2">Box Two</string>
+    <string name="box3">Box Three</string>
+    <string name="box4">Box Four</string>
+    <string name="box5">Box Five</string>
+    <string name="box6">Box Six</string>
+    <string name="box7">Box Seven</string>
+    <string name="box8">Box Eight</string>
+    <string name="box9">Box Nine</string>
+    <string name="box10">Box Ten</string>
+    <string name="box11">Box Eleven</string>
+    <string name="box12">Box Twelve</string>
+    <string name="box13">Box Thirteen</string>
+    <string name="box14">Box Fourteen</string>
+    <string name="box15">Box Fifteen</string>
+    <string name="box16">Box Sixteen</string>
+    <string name="box17">Box Seventeen</string>
+    <string name="box18">Box Eighteen</string>
+    <string name="box19">Box Nineteen</string>
+    <string name="box20">Box Twenty</string>
+    <string name="box21">Box Twenty One</string>
+    <string name="box22">Box Twenty Two</string>
+    <string name="box23">Box Twenty Three</string>
+    <string name="box24">Box Twenty Four</string>
+    <string name="box25">Box Twenty Five</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
