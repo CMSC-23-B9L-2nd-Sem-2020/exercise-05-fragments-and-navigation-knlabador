@@ -26,112 +26,348 @@
             type="com.example.android.navigation.GameFragment" />
     </data>
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:background="#FFC107">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/frameLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/box5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box4"
+            app:layout_constraintTop_toBottomOf="@+id/nickname_user" />
 
-            <ImageView
-                android:id="@+id/questionImage"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/image_header_height"
-                android:layout_marginStart="@dimen/horizontal_margin"
-                android:layout_marginTop="@dimen/vertical_margin"
-                android:layout_marginEnd="@dimen/horizontal_margin"
-                android:layout_marginBottom="@dimen/vertical_margin"
-                android:scaleType="fitCenter"
-                app:layout_constraintBottom_toTopOf="@+id/questionText"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_chainStyle="packed"
-                app:srcCompat="@drawable/android_category_simple" />
+        <TextView
+            android:id="@+id/box2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box7"
+            app:layout_constraintEnd_toStartOf="@+id/box3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box1"
+            app:layout_constraintTop_toBottomOf="@+id/nickname_user" />
 
-            <TextView
-                android:id="@+id/questionText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/question_horizontal_margin"
-                android:layout_marginTop="@dimen/vertical_margin"
-                android:layout_marginEnd="@dimen/question_horizontal_margin"
-                android:layout_marginBottom="@dimen/vertical_margin"
-                android:fontFamily="sans-serif"
-                android:text="@{game.currentQuestion.text}"
-                android:textSize="@dimen/question_text_size"
-                android:textStyle="bold"
-                android:typeface="normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/questionImage"
-                tools:text="What color is the Android mascot?" />
+        <TextView
+            android:id="@+id/box1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box6"
+            app:layout_constraintEnd_toStartOf="@+id/box2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nickname_user" />
 
-            <RadioGroup
-                android:id="@+id/questionRadioGroup"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/question_horizontal_margin"
-                android:layout_marginTop="@dimen/vertical_margin"
-                android:layout_marginEnd="@dimen/question_horizontal_margin"
-                android:animateLayoutChanges="true"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/questionText">
+        <TextView
+            android:id="@+id/box3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box8"
+            app:layout_constraintEnd_toStartOf="@+id/box4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box2"
+            app:layout_constraintTop_toBottomOf="@+id/nickname_user" />
 
-                <RadioButton
-                    android:id="@+id/firstAnswerRadioButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/question_vertical_margin"
-                    android:checked="true"
-                    android:text="@{game.answers[0]}"
-                    android:textSize="@dimen/answer_text_size"
-                    tools:text="Blue" />
+        <TextView
+            android:id="@+id/box4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box9"
+            app:layout_constraintEnd_toStartOf="@+id/box5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box3"
+            app:layout_constraintTop_toBottomOf="@+id/nickname_user" />
 
-                <RadioButton
-                    android:id="@+id/secondAnswerRadioButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/question_vertical_margin"
-                    android:text="@{game.answers[1]}"
-                    android:textSize="@dimen/answer_text_size"
-                    tools:text="Green" />
+        <TextView
+            android:id="@+id/box14"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box19"
+            app:layout_constraintEnd_toStartOf="@+id/box15"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box13"
+            app:layout_constraintTop_toBottomOf="@+id/box9" />
 
-                <RadioButton
-                    android:id="@+id/thirdAnswerRadioButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/question_vertical_margin"
-                    android:text="@{game.answers[2]}"
-                    android:textSize="@dimen/answer_text_size"
-                    tools:text="Yellow" />
+        <TextView
+            android:id="@+id/box9"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box14"
+            app:layout_constraintEnd_toStartOf="@+id/box10"
+            app:layout_constraintStart_toEndOf="@+id/box8"
+            app:layout_constraintTop_toBottomOf="@+id/box4" />
 
-                <RadioButton
-                    android:id="@+id/fourthAnswerRadioButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@{game.answers[3]}"
-                    android:textSize="@dimen/answer_text_size"
-                    tools:text="Red" />
-            </RadioGroup>
+        <TextView
+            android:id="@+id/box19"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box24"
+            app:layout_constraintEnd_toStartOf="@+id/box20"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box18"
+            app:layout_constraintTop_toBottomOf="@+id/box14" />
 
-            <Button
-                android:id="@+id/submitButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/question_horizontal_margin"
-                android:layout_marginTop="@dimen/vertical_margin"
-                android:layout_marginEnd="@dimen/question_horizontal_margin"
-                android:text="@string/submit_button"
-                android:textSize="@dimen/button_text_size"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/questionRadioGroup" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+        <TextView
+            android:id="@+id/box24"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/submitButton"
+            app:layout_constraintEnd_toStartOf="@+id/box20"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toEndOf="@+id/box18"
+            app:layout_constraintTop_toBottomOf="@+id/box19" />
+
+        <TextView
+            android:id="@+id/box6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box11"
+            app:layout_constraintEnd_toStartOf="@+id/box7"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box1" />
+
+        <TextView
+            android:id="@+id/box7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box12"
+            app:layout_constraintEnd_toStartOf="@+id/box8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box6"
+            app:layout_constraintTop_toBottomOf="@+id/box2" />
+
+        <TextView
+            android:id="@+id/box8"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box13"
+            app:layout_constraintEnd_toStartOf="@+id/box9"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box7"
+            app:layout_constraintTop_toBottomOf="@+id/box3" />
+
+        <TextView
+            android:id="@+id/box10"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box9"
+            app:layout_constraintTop_toBottomOf="@+id/box5" />
+
+        <TextView
+            android:id="@+id/box11"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box16"
+            app:layout_constraintEnd_toStartOf="@+id/box12"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box6" />
+
+        <TextView
+            android:id="@+id/box12"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box17"
+            app:layout_constraintEnd_toStartOf="@+id/box13"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box11"
+            app:layout_constraintTop_toBottomOf="@+id/box7" />
+
+        <TextView
+            android:id="@+id/box13"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box18"
+            app:layout_constraintEnd_toStartOf="@+id/box14"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box12"
+            app:layout_constraintTop_toBottomOf="@+id/box8" />
+
+        <TextView
+            android:id="@+id/box15"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box14"
+            app:layout_constraintTop_toBottomOf="@+id/box10" />
+
+        <TextView
+            android:id="@+id/box16"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box21"
+            app:layout_constraintEnd_toStartOf="@+id/box17"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box11" />
+
+        <TextView
+            android:id="@+id/box17"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box22"
+            app:layout_constraintEnd_toStartOf="@+id/box18"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box16"
+            app:layout_constraintTop_toBottomOf="@+id/box12" />
+
+        <TextView
+            android:id="@+id/box18"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box23"
+            app:layout_constraintEnd_toStartOf="@+id/box19"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box17"
+            app:layout_constraintTop_toBottomOf="@+id/box13" />
+
+        <TextView
+            android:id="@+id/box20"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/box25"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box19"
+            app:layout_constraintTop_toBottomOf="@+id/box15" />
+
+        <TextView
+            android:id="@+id/box21"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/submitButton"
+            app:layout_constraintEnd_toStartOf="@+id/box17"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box16" />
+
+        <TextView
+            android:id="@+id/box25"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/submitButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toEndOf="@+id/box24"
+            app:layout_constraintTop_toBottomOf="@+id/box20" />
+
+        <TextView
+            android:id="@+id/box22"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/submitButton"
+            app:layout_constraintEnd_toStartOf="@+id/box18"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box16"
+            app:layout_constraintTop_toBottomOf="@+id/box17" />
+
+        <TextView
+            android:id="@+id/box23"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/submitButton"
+            app:layout_constraintEnd_toStartOf="@+id/box19"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box17"
+            app:layout_constraintTop_toBottomOf="@+id/box18" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="76dp"
+            android:text="@string/reset_button"
+            android:textSize="@dimen/button_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/clicks_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clicks_text"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/submitButton"
+            app:layout_constraintVertical_bias="0.21" />
+
+        <TextView
+            android:id="@+id/nickname_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:shadowColor="@android:color/black"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
