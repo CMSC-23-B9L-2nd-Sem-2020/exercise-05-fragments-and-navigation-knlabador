@@ -39,6 +39,9 @@ class GameFragment : Fragment() {
         binding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_game, container, false)
 
+        val myGame = activity as MainActivity?
+        binding.nicknameUser.text = myGame?.nicknameTextView
+
         binding.game = this
 
         binding.submitButton.setOnClickListener {
@@ -80,7 +83,6 @@ class GameFragment : Fragment() {
                 board[i][j].setBackgroundColor(Color.WHITE)
                 light[i][j] = 1
                 numOfClicks = 0
-                val text = "Clicks: $numOfClicks"
             }
         }
     }
@@ -99,7 +101,6 @@ class GameFragment : Fragment() {
     private fun flipLights(view: View,board: List<List<View>>,i: Int,j: Int, light: Array<Array<Int>>) {
         var winFlag = 0
         numOfClicks++
-        val text = "Clicks: $numOfClicks"
         change(view,i,j,light)
 
         if(i==0) { //row 1
