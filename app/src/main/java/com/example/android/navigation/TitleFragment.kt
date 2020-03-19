@@ -17,8 +17,11 @@
  package com.example.android.navigation
 
 
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.view.*
+import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -35,9 +38,19 @@ class TitleFragment : Fragment() {
         binding.playButton.setOnClickListener { view : View ->
             val myGame = activity as MainActivity?
             myGame?.nicknameTextView = nickname_text.text.toString()
+            hideKeyboard()
             view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
         }
 
         return binding.root
+    }
+
+    fun Fragment.hideKeyboard() {
+        view?.let { activity?.hideKeyboard(it) }
+    }
+
+    fun Context.hideKeyboard(view: View) {
+        val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
     }
 }
