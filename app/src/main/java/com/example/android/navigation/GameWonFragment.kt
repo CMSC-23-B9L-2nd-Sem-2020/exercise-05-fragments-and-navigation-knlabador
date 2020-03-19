@@ -33,6 +33,10 @@ class GameWonFragment : Fragment() {
         val binding: FragmentGameWonBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_game_won, container, false)
 
+        val myGame = activity as MainActivity?
+        val text = "Clicks: " + myGame?.clicksText
+
+        binding.clicksText1.text = text
         binding.nextMatchButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_gameWonFragment_to_titleFragment)
         }

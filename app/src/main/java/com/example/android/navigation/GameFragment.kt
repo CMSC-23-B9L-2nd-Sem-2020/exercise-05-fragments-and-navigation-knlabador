@@ -83,6 +83,8 @@ class GameFragment : Fragment() {
                 board[i][j].setBackgroundColor(Color.WHITE)
                 light[i][j] = 1
                 numOfClicks = 0
+                val text = "Clicks: $numOfClicks"
+                binding.clicksText.text = text
             }
         }
     }
@@ -101,6 +103,8 @@ class GameFragment : Fragment() {
     private fun flipLights(view: View,board: List<List<View>>,i: Int,j: Int, light: Array<Array<Int>>) {
         var winFlag = 0
         numOfClicks++
+        val text = "Clicks: $numOfClicks"
+        binding.clicksText.text = text
         change(view,i,j,light)
 
         if(i==0) { //row 1
@@ -164,6 +168,8 @@ class GameFragment : Fragment() {
         }
 
         if(winFlag == 25) {
+            val myGame = activity as MainActivity?
+            myGame?.clicksText = numOfClicks.toString()
             view.findNavController().navigate(R.id.action_gameFragment_to_gameWonFragment)
         }
     }
